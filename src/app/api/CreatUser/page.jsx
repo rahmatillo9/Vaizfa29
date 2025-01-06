@@ -1,16 +1,16 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-
+import { useRouter } from "next/navigation";
 export default function AddUserModal() {
   const [formData, setFormData] = useState({
     fullName: "",
     age: "",
     profession: "",
     experience: "",
-    file: null,
+    file: "",
   });
-
+   const router = useRouter();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -47,6 +47,7 @@ export default function AddUserModal() {
           experience: "",
           file: null,
         });
+        router.push("/api/users");
       } else {
         console.error("Xatolik yuz berdi");
       }
