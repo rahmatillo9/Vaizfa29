@@ -37,7 +37,7 @@ export default function TableDemo() {
       </a>
       
       <Table>
-        <TableCaption>Foydalanuvchilar ro'yxati</TableCaption>
+        <TableCaption>Foydalanuvchilar royxati</TableCaption>
         <TableHeader>
           <TableRow> 
             <TableHead className="w-[100px]">Ism</TableHead>
